@@ -3,14 +3,20 @@ import './App.css';
 import Row from './components/Row';
 import requests from './requests';
 import Banner from './components/Banner';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <React.Fragment>
       <div className='app-container'>
         {/* Navbar */}
+        <Navbar></Navbar>
 
+        {/* End Navbar */}
+
+        {/* Banner */}
         <Banner></Banner>
+        {/* End Banner */}
 
         {/* Row Component */}
         <section className='section-center'>

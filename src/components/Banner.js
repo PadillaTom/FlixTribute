@@ -29,11 +29,9 @@ function Banner() {
     <React.Fragment>
       <div
         className='banner'
-        styles={{
+        style={{
           backgroundSize: 'cover',
-          backgroundImage: `url (
-              "https://image.tmdb.org/t/p/${movie?.backdrop_path}"
-              )`,
+          backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
           backgroundPosition: 'center center',
         }}
       >
@@ -47,7 +45,6 @@ function Banner() {
           </div>
           <p className='banner-desc'>{movie?.overview}</p>
         </div>
-        <div className='banner-fade-bottom'></div>
       </div>
     </React.Fragment>
   );

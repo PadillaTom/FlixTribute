@@ -28,63 +28,67 @@ html {
   --MainTransition: 0.3s ease all;
 }
 /* End Variables */
+
 /* ::::::::::::::::::: APP ::::::::::::::::::::: */
 .app-container {
-  background-color: #111;
+  background-color: rgb(4, 4, 4);
 }
 /* End APP */
-/* ::::::::::::::::::: Rows ::::::::::::::::::::: */
-.row-container {
-  color: white;
-  padding-top: 1rem;
-}
-.row-poster-img {
-  object-fit: cover;
-  width: 100%;
-  max-height: 7rem;
-  transition: 450ms all;
-  margin-right: 0.7rem;
-}
-.row-poster-img:hover {
-  transform: scale(1.08);
-}
-.row-poster-container {
+
+/* ::::::::::::::::::: Navbar::::::::::::::::::::: */
+.navbar-container {
   display: flex;
-  overflow: hidden;
-  overflow-x: scroll;
-  padding: 1.3rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 2;
   width: 100%;
+  transition: var(--MainTransition);
 }
-.row-poster-container::-webkit-scrollbar {
-  display: none;
+.nav-fixed {
+  background-color: rgba(0, 0, 0, 0.891);
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.364);
 }
-.large-row {
-  max-height: 16rem;
+.navbar-logo {
+  color: #fafafa;
+  letter-spacing: 2px;
+  font-size: 1.7rem;
 }
-.large-row:hover {
-  transform: scale(1.1);
+.navbar-logo span {
+  color: red;
 }
-/* End Rows */
+.nav-avatar img {
+  height: 2.5rem;
+}
+/* End Navbar */
 
 /* ::::::::::::::::::: Banner ::::::::::::::::::::: */
 .banner {
   background-color: lightgray;
   object-fit: contain;
+  height: 85vh;
+  position: relative;
 }
 .banner-info-container {
   color: white;
-  width: 70vw;
-  margin: 0 auto;
-  padding-top: 6rem;
+  width: 70%;
+  margin-left: 1rem;
   padding-bottom: 2rem;
+  padding-top: 9rem;
+  position: absolute;
+  top: 7rem;
 }
 .banner-title {
   font-size: 3rem;
   font-weight: 800;
   padding-bottom: 0.3rem;
+  max-width: 75vw;
 }
 .banner-desc {
-  width: 97%;
+  max-width: 80vw;
   font-size: 1.1rem;
   line-height: 1;
   padding-top: 1rem;
@@ -108,14 +112,45 @@ html {
   color: #000;
   background-color: #e6e6e6;
 }
-.banner-fade-bottom {
-  height: 1.5rem;
-  background: linear-gradient(transparent, rgba(37, 37, 37, 0.6), #111);
-}
+
 /* End Banner */
 
-/* ::::::::::::::::::: App Header ::::::::::::::::::::: */
-/* End App Header */
+/* ::::::::::::::::::: Rows ::::::::::::::::::::: */
+.row-container {
+  color: white;
+  padding-top: 1rem;
+}
+.row-container h2 {
+  font-size: 1.3rem;
+  letter-spacing: 1.4px;
+}
+.row-poster-img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 7rem;
+  transition: 450ms all;
+  margin-right: 0.7rem;
+}
+.row-poster-img:hover {
+  transform: scale(1.06);
+}
+.row-poster-container {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  padding-top: 1rem;
+  width: 100%;
+}
+.row-poster-container::-webkit-scrollbar {
+  display: none;
+}
+.large-row {
+  max-height: 16rem;
+}
+.large-row:hover {
+  transform: scale(1.08);
+}
+/* End Rows */
 
 /* ::::::::::::::::::: App Header ::::::::::::::::::::: */
 /* End App Header */
