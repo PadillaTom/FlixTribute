@@ -1,4 +1,4 @@
-const API_KEY = '1c07d5d226aba14a4bb5b1fe1e5bcab5';
+const API_KEY = process.env.REACT_APP_KEY_VAR;
 
 // View the TMDB DOCs to see how to make Requests:
 // Here are a few URLs examples:
