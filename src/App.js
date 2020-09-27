@@ -1,15 +1,49 @@
 import React from 'react';
 import './App.css';
 import Row from './components/Row';
+import requests from './requests';
+import Banner from './components/Banner';
 
 function App() {
   return (
     <React.Fragment>
-      <h1>Hello from APP</h1>
-      {/* Row Component */}
+      <div className='app-container'>
+        {/* Navbar */}
 
-      <Row title='NETFLIX ORIGINALS'></Row>
-      <Row title='Trending Now'></Row>
+        <Banner></Banner>
+
+        {/* Row Component */}
+        <section className='section-center'>
+          <Row
+            title='NEW RELEASES'
+            fetchUrl={requests.fetchNewReleases}
+            isLargeRow
+          ></Row>
+          <Row title='Trending Now' fetchUrl={requests.fetchTrending}></Row>
+          <Row title='Top Rated' fetchUrl={requests.fetchTopRated}></Row>
+          <Row
+            title='Action Movies'
+            fetchUrl={requests.fetchActionMovies}
+          ></Row>
+          <Row
+            title='Comedy Movies'
+            fetchUrl={requests.fetchComedyMovies}
+          ></Row>
+          <Row
+            title='Horror Movies'
+            fetchUrl={requests.fetchHorrorMovies}
+          ></Row>
+          <Row
+            title='Romance Movies'
+            fetchUrl={requests.fetchRomanceMovies}
+          ></Row>
+          <Row
+            title='Documentaries'
+            fetchUrl={requests.fetchDocumentaries}
+          ></Row>
+        </section>
+        {/* End Row Component */}
+      </div>
     </React.Fragment>
   );
 }
