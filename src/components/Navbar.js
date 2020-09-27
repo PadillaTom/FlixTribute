@@ -20,7 +20,9 @@ function Navbar() {
       <nav className={`navbar-container ${show && 'nav-fixed'} `}>
         <div className='navbar-logo'>
           <h1>
-            <span>Flix </span>Tribute
+            <a href='/'>
+              <span>Flix </span>Tribute
+            </a>
           </h1>
         </div>
         <div className='nav-avatar'>

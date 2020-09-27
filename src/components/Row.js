@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import YouTube from 'react-youtube';
 import axios from '../axios';
-import Youtube from 'react-youtube';
+import YouTube from 'react-youtube';
+import movieTrailer from 'movie-trailer';
 
 //Base URL for Images Path --> "/4egSeI3qLvY22lHn4yIDrrU0ZNF.jpg"
 const imgBaseUrl = 'https://image.tmdb.org/t/p/w500';
@@ -31,13 +31,14 @@ function Row({ title, fetchUrl, isLargeRow }) {
   const opts = {
     height: '390',
     width: '100%',
+    marginTop: '0.5rem',
     playerVars: {
       // URL
       autoplay: 1,
     },
   };
   // Functions:
-  const handleClick = () => {
+  const handleClick = (item) => {
     if (trailerUrl) {
       setTrailerUrl('');
     } else {
@@ -46,7 +47,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
         // If Found-->
         .then((url) => {
           // Youtube Dummy URL : https://www.youtube.com/watch?v=XtMThy8QKqU&t=9658s
-          const urlParams = new URL(url).search;
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerUrl(urlParams.get('v'));
         }) //Not Found --> Log Error
         .catch((error) => console.log(error));
     }
