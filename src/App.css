@@ -163,10 +163,14 @@ a {
 .large-row:hover {
   transform: scale(1.08);
 }
+.row-center {
+  padding-bottom: 4rem;
+}
 /* End Rows */
 
-/* ::::::::::::::::::: App Header ::::::::::::::::::::: */
-/* End App Header */
+/* ::::::::::::::::::: Footer::::::::::::::::::::: */
+
+/* End Footer */
 
 /* ::::::::::::::::::: App Header ::::::::::::::::::::: */
 /* End App Header */

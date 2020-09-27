@@ -19,7 +19,7 @@ function App() {
         {/* End Banner */}
 
         {/* Row Component */}
-        <section className='section-center'>
+        <section className='section-center row-center'>
           <Row
             title='NEW RELEASES'
             fetchUrl={requests.fetchNewReleases}
