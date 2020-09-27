@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.css';
+import Row from './components/Row';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>hey</header>
-    </div>
+    <React.Fragment>
+      <h1>Hello from APP</h1>
+      {/* Row Component */}
+
+      <Row title='NETFLIX ORIGINALS'></Row>
+      <Row title='Trending Now'></Row>
+    </React.Fragment>
   );
 }
 
