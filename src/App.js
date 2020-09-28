@@ -4,6 +4,7 @@ import Row from './components/Row';
 import requests from './requests';
 import Banner from './components/Banner';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
           ></Row>
         </section>
         {/* End Row Component */}
+
+        {/* Footer */}
+        <Footer></Footer>
+        {/* End Footer */}
       </div>
     </React.Fragment>
   );

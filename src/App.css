@@ -23,6 +23,9 @@ a {
   max-width: 90vw;
   margin: 0 auto;
 }
+ul {
+  list-style: none;
+}
 /* End Globals */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
@@ -117,6 +120,22 @@ a {
   background-color: #e6e6e6;
 }
 
+@media screen and (min-width: 690px) {
+  .banner {
+    height: 70vh;
+  }
+  .banner-info-container {
+    top: 9rem;
+  }
+}
+@media screen and (min-width: 750px) {
+  .banner {
+    height: 75vh;
+  }
+  .banner-info-container {
+    top: 10rem;
+  }
+}
 /* End Banner */
 
 /* ::::::::::::::::::: Rows ::::::::::::::::::::: */
@@ -164,12 +183,48 @@ a {
   transform: scale(1.08);
 }
 .row-center {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 /* End Rows */
 
 /* ::::::::::::::::::: Footer::::::::::::::::::::: */
-
+.footer-container {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  border-top: 0.45px solid rgba(238, 45, 45, 0.097);
+}
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icon-footer {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: var(--MainTransition);
+}
+.social-icon-footer:hover {
+  color: red;
+  transform: scale(1.2);
+}
+.copy-container {
+  letter-spacing: 1.5px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.copy-container span {
+  color: red;
+  font-weight: 400;
+  margin-left: 1rem;
+}
+.footer-copy {
+  margin-right: 0.5rem;
+}
 /* End Footer */
 
 /* ::::::::::::::::::: App Header ::::::::::::::::::::: */
